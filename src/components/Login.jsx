@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -6,22 +7,25 @@ import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
+import Lock from "@material-ui/icons/Lock";
 // core components
-import Header from "components/Header/Header.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import Footer from "components/Footer/Footer.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardFooter from "components/Card/CardFooter.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
+import Header from "./Header/Header.js";
+import HeaderLinks from "./Header/HeaderLinks.js";
+import Footer from "./Footer/Footer.js";
+import GridContainer from "./Grid/GridContainer.js";
+import GridItem from "./Grid/GridItem.js";
+import Button from "./CustomButtons/Button.js";
+import Card from "./Card/Card.js";
+import CardBody from "./Card/CardBody.js";
+import CardHeader from "./Card/CardHeader.js";
+import CardFooter from "./Card/CardFooter.js";
+import CustomInput from "./CustomInput/CustomInput.js";
 
-import styles from "assets/jss/material-kit-react/views/loginPage.js";
+import styles from "./assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "./assets/img/bg7.jpg";
+
+import SignUp from "SignUp"
 
 const useStyles = makeStyles(styles);
 
@@ -37,8 +41,8 @@ const Login = (props) => {
       <Header
         absolute
         color="transparent"
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
+        brand="Stock Price Prediction"
+        // rightLinks={<HeaderLinks />}
         {...rest}
       />
       <div
@@ -89,8 +93,8 @@ const Login = (props) => {
                   <p className={classes.divider}>Or Be Classical</p>
                   <CardBody>
                     <CustomInput
-                      labelText="First Name..."
-                      id="first"
+                      labelText="Last Name..."
+                      id="last"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -128,9 +132,7 @@ const Login = (props) => {
                         type: "password",
                         endAdornment: (
                           <InputAdornment position="end">
-                            <Icon className={classes.inputIconsColor}>
-                              lock_outline
-                            </Icon>
+                            <Lock className={classes.inputIconsColor}/>
                           </InputAdornment>
                         ),
                         autoComplete: "off"
@@ -140,6 +142,9 @@ const Login = (props) => {
                   <CardFooter className={classes.cardFooter}>
                     <Button simple color="primary" size="lg">
                       Get started
+                    </Button>
+                    <Button simple color="primary" size="lg">
+                      Sign up
                     </Button>
                   </CardFooter>
                 </form>
