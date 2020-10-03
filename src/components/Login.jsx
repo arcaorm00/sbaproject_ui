@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -25,11 +26,14 @@ import styles from "./assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "./assets/img/bg7.jpg";
 
-import SignUp from "SignUp"
+import SignUp from "./SignUp"
+
+//https://demos.creative-tim.com/material-kit-react/#/
 
 const useStyles = makeStyles(styles);
 
 const Login = (props) => {
+
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function() {
     setCardAnimation("");
@@ -143,7 +147,7 @@ const Login = (props) => {
                     <Button simple color="primary" size="lg">
                       Get started
                     </Button>
-                    <Button simple color="primary" size="lg">
+                    <Button simple color="primary" size="lg" onClick={() => this.props.history.push("/signup")}>
                       Sign up
                     </Button>
                   </CardFooter>

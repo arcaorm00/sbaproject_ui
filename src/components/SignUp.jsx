@@ -40,8 +40,8 @@ const Login = (props) => {
         absolute
         color="transparent"
         brand="Stock Price Prediction"
-        rightLinks={<HeaderLinks />}
-        {...rest}
+        // rightLinks={<HeaderLinks />}
+        // {...rest}
       />
       <div
         className={classes.pageHeader}
@@ -88,7 +88,7 @@ const Login = (props) => {
                       </Button>
                     </div>
                   </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+                  {/* <p className={classes.divider}>Or Be Classical</p> */}
                   <CardBody>
                     <CustomInput
                       labelText="Last Name..."
@@ -98,11 +98,6 @@ const Login = (props) => {
                       }}
                       inputProps={{
                         type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
                       }}
                     />
                     <CustomInput
@@ -112,27 +107,50 @@ const Login = (props) => {
                         fullWidth: true
                       }}
                       inputProps={{
-                        type: "email",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
+                        type: "email"
                       }}
                     />
                     <CustomInput
-                      labelText="Password"
+                      labelText="Password..."
                       id="pass"
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
                         type: "password",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Lock className={classes.inputIconsColor}/>
-                          </InputAdornment>
-                        ),
+                        autoComplete: "off"
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Gender..."
+                      id="gender"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "text",
+                        autoComplete: "off"
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Geography..."
+                      id="geography"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "text",
+                        autoComplete: "off"
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Age..."
+                      id="age"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "number",
                         autoComplete: "off"
                       }}
                     />
