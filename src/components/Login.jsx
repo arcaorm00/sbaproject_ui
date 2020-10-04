@@ -10,21 +10,20 @@ import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
 import Lock from "@material-ui/icons/Lock";
 // core components
-import Header from "./Header/Header.js";
-import HeaderLinks from "./Header/HeaderLinks.js";
-import Footer from "./Footer/Footer.js";
-import GridContainer from "./Grid/GridContainer.js";
-import GridItem from "./Grid/GridItem.js";
-import Button from "./CustomButtons/Button.js";
-import Card from "./Card/Card.js";
-import CardBody from "./Card/CardBody.js";
-import CardHeader from "./Card/CardHeader.js";
-import CardFooter from "./Card/CardFooter.js";
-import CustomInput from "./CustomInput/CustomInput.js";
+import Header from "./sign/Header/Header.js";
+import HeaderLinks from "./sign/Header/HeaderLinks.js";
+import Footer from "./sign/Footer/Footer.js";
+import GridContainer from "./sign/Grid/GridContainer.js";
+import GridItem from "./sign/Grid/GridItem.js";
+import Button from "./sign/CustomButtons/Button.js";
+import Card from "./sign/Card/Card.js";
+import CardBody from "./sign/Card/CardBody.js";
+import CardHeader from "./sign/Card/CardHeader.js";
+import CardFooter from "./sign/Card/CardFooter.js";
+import CustomInput from "./sign/CustomInput/CustomInput.js";
 
-import styles from "./assets/jss/material-kit-react/views/loginPage.js";
-
-import image from "./assets/img/bg7.jpg";
+import styles from "./sign/assets/jss/material-kit-react/views/loginPage.js";
+import image from "./sign/assets/img/bg7.jpg";
 
 import SignUp from "./SignUp"
 
@@ -63,7 +62,7 @@ const Login = (props) => {
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
+                    <h3>Login</h3>
                     <div className={classes.socialLine}>
                       <Button
                         justIcon
@@ -156,7 +155,7 @@ const Login = (props) => {
             </GridItem>
           </GridContainer>
         </div>
-        <Footer whiteFont />
+        {/* <Footer whiteFont /> */}
       </div>
     </div>
 </>
