@@ -27,7 +27,8 @@ import image from "./sign/assets/img/bg7.jpg";
 
 const useStyles = makeStyles(styles);
 
-const Login = (props) => {
+const SignUp = (props) => {
+
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function() {
     setCardAnimation("");
@@ -171,4 +172,4 @@ const Login = (props) => {
 </>
 }
 
-export default Login
+export default SignUp

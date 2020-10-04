@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
+import Link from '@material-ui/core/Link';
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
@@ -32,6 +33,9 @@ import SignUp from "./SignUp"
 const useStyles = makeStyles(styles);
 
 const Login = (props) => {
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function() {
@@ -93,23 +97,8 @@ const Login = (props) => {
                       </Button>
                     </div>
                   </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+                  {/* <p className={classes.divider}>Or Be Classical</p> */}
                   <CardBody>
-                    <CustomInput
-                      labelText="Last Name..."
-                      id="last"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
                     <CustomInput
                       labelText="Email..."
                       id="email"
@@ -150,11 +139,17 @@ const Login = (props) => {
                       Sign up
                     </Button>
                   </CardFooter>
+                  <div style={{padding: "0px 0px 20px 20px"}}>
+                    <Link href="#" variant="body2">
+                      Forgot password?
+                    </Link>
+                  </div>
                 </form>
               </Card>
             </GridItem>
           </GridContainer>
         </div>
+        
         {/* <Footer whiteFont /> */}
       </div>
     </div>
